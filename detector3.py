@@ -4,7 +4,7 @@ import cv2
 img = cv2.imread('shapes1.jpg')
 imgGrey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 _, thrash = cv2.threshold(imgGrey, 240, 255, cv2.THRESH_BINARY)
-contours, _ = cv2.findContours(thrash, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+_,contours, _ = cv2.findContours(thrash, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
 cv2.imshow("img", img)
 for contour in contours:
