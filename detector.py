@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('dOne.jpeg')
+img = cv2.imread('dOne.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #change to gray for canny detector
 edges = cv2.Canny(gray, 50, 150, apertureSize=3) #first thres = 50 second thres = 150
 cv2.namedWindow('edges',cv2.WINDOW_NORMAL)
