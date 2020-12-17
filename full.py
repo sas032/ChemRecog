@@ -1,7 +1,16 @@
-import numpy as np
 import cv2
+import numpy as np
+import pytesseract as tess
+from PIL import Image
+import os
 
-img = cv2.imread('hexa.jpg')
+#output file
+output=open('out.txt', 'w')
+
+
+
+#for shape
+img = cv2.imread('ocrtotest.png')
 imgGrey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 _, thrash = cv2.threshold(imgGrey, 240, 255, cv2.THRESH_BINARY)
 _,contours, _ = cv2.findContours(thrash, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
@@ -24,12 +33,28 @@ for contour in contours:
           cv2.putText(img, "rectangle", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
     elif len(approx) == 5:
         cv2.putText(img, "Pentagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
-    elif len(approx) == 10:
-        cv2.putText(img, "Star", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
+        output.write("SHAPE : Pentagon" + '\n')
+    elif len(approx) == 6:
+        cv2.putText(img, "Hexagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
+        output.write("SHAPE : Hexagon" + '\n')
+
     else:
         cv2.putText(img, "Circle", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
+        output.write("SHAPE : Circle" + '\n')
+
 
 
 cv2.imshow("shapes", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+
+
+
+#for text
+imgtext= Image.open('ocr2.png')
+text=tess.image_to_string(imgtext)
+
+output.write("CHEMICAL ATTACHED :" + text + '\n')
+
