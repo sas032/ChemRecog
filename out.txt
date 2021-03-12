@@ -1,14 +1,1 @@
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Hexagon
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Circle
-SHAPE : Circle
-CHEMICAL ATTACHED :OH
 
-OH
-
