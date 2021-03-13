@@ -17,7 +17,7 @@ plt.style.use('fivethirtyeight')
 #from keras.datasets import cifar10
 
 dirr="~/Desktop/DEVELOPMENT AND WORK(RESEARCH)/ONGOING (Application Project)/ChemRecog/Datasets"
-CATEGORY = []
+CATEGORY = ["",""]
 for category in CATEGORY:
 	path = os.path.join(DATADIR,category)  
     	for img in os.listdir(path):  
