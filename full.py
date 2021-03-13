@@ -12,7 +12,7 @@ output=open('out.txt', 'w')
 
 
 #for shape
-img = cv2.imread('ocrr2.png')
+img = cv2.imread('hexa.jpg')
 imgGrey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 _, thrash = cv2.threshold(imgGrey, 240, 255, cv2.THRESH_BINARY)
 _,contours, _ = cv2.findContours(thrash, cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
@@ -55,7 +55,7 @@ cv2.destroyAllWindows()
 
 
 #for text
-imgtext= Image.open('ocr2.png')
+imgtext= Image.open('hexa.jpg')
 text=tess.image_to_string(imgtext)
 
 output.write("CHEMICAL ATTACHED :" + text + '\n')
