@@ -17,7 +17,7 @@ plt.style.use('fivethirtyeight')
 #from keras.datasets import cifar10
 
 dirr="~/Desktop/DEVELOPMENT AND WORK(RESEARCH)/ONGOING (Application Project)/ChemRecog/Datasets"
-CATEGORY = ["",""]
+CATEGORY = ["acetaminophen","acetylsalicylic","Adrenaline","Ethane","Ethene","Ethylene","ibuprofen","Isopentane","M-xykene (1,3 - dimethylbenzene)","Neopentane","o-xylene (1,2 - dimethylbenzene)","Phenylalanine","Propylene","P-xylene (1,4 - dimethylbenzene)"]
 for category in CATEGORY:
 	path = os.path.join(DATADIR,category)  
     	for img in os.listdir(path):  
