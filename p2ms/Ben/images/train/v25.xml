@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>v25.png</filename>
+	<path>C:\Users\User\Documents\Git\Ben\images\v25.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>334</width>
+		<height>342</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>shape_mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>58</xmin>
+			<ymin>48</ymin>
+			<xmax>266</xmax>
+			<ymax>315</ymax>
+		</bndbox>
+	</object>
+</annotation>
