@@ -1,0 +1,16 @@
+0 benzene
+1 acetaminophen
+2 acetysalicylic
+3 adrenaline
+4 ethane
+5 ethene
+6 ethylene
+7 ibuprofen
+8 isopentane
+9 propylene
+10 M-xykene (1,3 - dimethylbenzene)
+11 o-xylene (1,2 - dimethylbenzene)
+12 neopentane
+13 phenylalanine
+14 P-xylene (1,4 - dimethylbenzene)
+15 Unknown or Bonds
