@@ -32,7 +32,7 @@ cnn.compile(optimizer=tf.keras.optimizers.Adam(),loss='categorical_crossentropy'
 
 cnn.fit(train_datagen,epochs=10,validation_data=test_datagen)
 
-img = cv2.imread("data/train/benzene/v1.jpeg")
+img = cv2.imread("data/test/")
 res=cv2.resize(img ,dsize=(500,500), interpolation=cv2.INTER_CUBIC)
 npimg=np.array(res)
 print(npimg.shape)
