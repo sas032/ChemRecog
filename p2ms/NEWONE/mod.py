@@ -30,9 +30,9 @@ cnn.add(tf.keras.layers.Dense(16,activation='softmax'))
 
 cnn.compile(optimizer=tf.keras.optimizers.Adam(),loss='categorical_crossentropy',metrics=['accuracy'])
 
-cnn.fit(train_datagen,epochs=10,validation_data=test_datagen)
+cnn.fit(train_datagen,epochs=97,validation_data=test_datagen)
 
-img = cv2.imread("data/test/")
+img = cv2.imread("test/five.jpeg")
 res=cv2.resize(img ,dsize=(500,500), interpolation=cv2.INTER_CUBIC)
 npimg=np.array(res)
 print(npimg.shape)
